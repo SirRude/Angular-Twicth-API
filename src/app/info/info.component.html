@@ -1,0 +1,28 @@
+<input type="text" placeholder="search" required #Game>
+<button class="btn btn-default" (click)=" loadstreams(Game.value)">search</button>
+<h1>{{theGame}} streamers:</h1>
+<div>
+  <ul>
+    <li *ngFor="let stram of streamer">
+      <div class="row">
+        <div class="col-md-8">
+          <img src="{{stram.preview.large}}" alt="">
+        </div>
+      
+        <div class="col-md-4">
+          <div class="row">
+            <h3>{{stram.channel.name}}</h3>
+            <p>{{stram.viewers}} viewers</p>
+            <a href="{{stram.channel.url}}">{{stram.channel.url}}</a>
+            <p>average fps: {{stram.average_fps}}</p>
+            
+          </div>
+          <button class="btn btn-default" routerLink="/stream-video-site/{{stram.channel.name}}" routerLinkActive="active">Watch Stream</button>
+        </div> <br>
+        </div>
+    </li>
+  </ul>
+
+  
+
+</div>

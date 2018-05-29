@@ -1,0 +1,26 @@
+ <button class="btn btn-default" (click)="back()">Back</button>
+<h1>{{name}}</h1>
+
+<div class="row" >
+<div class="col-md-9 video-container">
+  <iframe 
+  class="e2e-iframe-trusted-src" 
+
+  [src]="videoUrl"
+  scrolling="no"
+  allowfullscreen="true"
+  
+  ></iframe>
+</div>
+<div class="col-md-3 video-container">
+  <iframe 
+        
+        frameborder="0"
+        scrolling="no"
+        id="chat_embed_dark"
+        [src]="chatUrl" >
+</iframe>
+</div>
+  </div>
+
+ 
